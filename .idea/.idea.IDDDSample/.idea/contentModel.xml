@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.4.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.api.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_IDDDSample.-1464311647.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="IDDDAgilePm" t="IncludeRecursive">
+        <e p="Application" t="Include">
+          <e p="Team" t="Include">
+            <e p="TeamApplicationService.cs" t="Include" />
+          </e>
+        </e>
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="Model" t="Include">
+            <e p="Entity.cs" t="Include" />
+            <e p="Team" t="Include">
+              <e p="IProductOwnerRepository.cs" t="Include" />
+              <e p="ITeamMemberRepository.cs" t="Include" />
+              <e p="ITeamRepository.cs" t="Include" />
+              <e p="Member.cs" t="Include" />
+              <e p="MemberChangeTracker.cs" t="Include" />
+              <e p="ProductOwner.cs" t="Include" />
+              <e p="ProductOwnerId.cs" t="Include" />
+              <e p="Team.cs" t="Include" />
+              <e p="TeamMember.cs" t="Include" />
+              <e p="TeamMemberId.cs" t="Include" />
+            </e>
+            <e p="Tenant" t="Include">
+              <e p="TenantId.cs" t="Include" />
+            </e>
+            <e p="ValueObject.cs" t="Include" />
+          </e>
+        </e>
+        <e p="IDDDAgilePm.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IDDDAgilePm.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Port" t="Include">
+          <e p="Adapter" t="Include">
+            <e p="Persistence" t="Include">
+              <e p="DataModel" t="Include">
+                <e p="TeamMemberDTO.cs" t="Include" />
+              </e>
+              <e p="MysqlProductOwnerRepository.cs" t="Include" />
+              <e p="MysqlTeamMemberRepository.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="IDDDAgilePm.Test" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="Model" t="Include">
+            <e p="MemberTestFixture.cs" t="Include" />
+            <e p="TeamTestFixture.cs" t="Include" />
+          </e>
+        </e>
+        <e p="IDDDAgilePm.Test.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IDDDAgilePm.Test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Port" t="Include">
+          <e p="Adapter" t="Include">
+            <e p="Persistence" t="Include">
+              <e p="Mysql" t="Include">
+                <e p="MysqlTeamMemberRepositoryFixture.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IDDDCommon" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Config" t="Include">
+          <e p="ApplicationConfig.cs" t="Include" />
+        </e>
+        <e p="Domain" t="Include">
+          <e p="Model" t="Include">
+            <e p="Process" t="Include">
+              <e p="DomainEvent.cs" t="Include" />
+              <e p="DomainEventPublisher.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Event" t="Include">
+          <e p="Source" t="Include">
+            <e p="EventStore.cs" t="Include" />
+          </e>
+        </e>
+        <e p="IDDDCommon.csproj" t="IncludeRecursive" />
+        <e p="Notification" t="Include">
+          <e p="NotificationPublisher.cs" t="Include" />
+          <e p="PublishedNotificationTracker.cs" t="Include" />
+          <e p="PublishNotificationTrackerStore.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IDDDCommon.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Port" t="Include">
+          <e p="Adapter" t="Include">
+            <e p="Messaging" t="Include">
+              <e p="Rabbitmq" t="Include">
+                <e p="BrokerChannel.cs" t="Include" />
+                <e p="ConnectionSettings.cs" t="Include" />
+                <e p="ExchangeListener.cs" t="Include" />
+                <e p="Exchanger.cs" t="Include" />
+                <e p="Queue.cs" t="Include" />
+                <e p="RabbitMQMessageListener.cs" t="Include" />
+                <e p="RabbitMQMessageProducer.cs" t="Include" />
+                <e p="RabbitMQNotificationPublisher.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Persistence" t="Include">
+              <e p="DatabaseProvider.cs" t="Include" />
+              <e p="Mysql" t="Include">
+                <e p="MySqlProvider.cs" t="Include" />
+              </e>
+              <e p="Redis" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="README.md" t="Include" />
+        <e p="Standard" t="Include">
+          <e p="AssertionConcern.cs" t="Include" />
+          <e p="StringExtension.cs" t="Include" />
+        </e>
+      </e>
+      <e p="IDDDCommon.Test" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="Model" t="Include">
+            <e p="Process" t="Include">
+              <e p="DomainEventFixture.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="IDDDCommon.Test.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="IDDDCommon.Test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Port" t="Include">
+          <e p="Adapter" t="Include">
+            <e p="Message" t="Include">
+              <e p="Rabbitmq" t="Include">
+                <e p="ConnectionSettingFixture.cs" t="Include" />
+                <e p="RabbitMessageProviderFixture.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Standard" t="Include">
+          <e p="StringExtensionFixture.cs" t="Include" />
+        </e>
+      </e>
+      <e p="IDDDSample.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src" t="Include" />
+      <e p="test" t="Include" />
+    </e>
+  </component>
+</project>
