@@ -5,5 +5,7 @@ namespace IDDDCommon.Port.Adapter.Messaging.Rabbitmq
         public ExchangeListener()
         {
         }
+
+        public abstract void ExchangeName();
     }
 }

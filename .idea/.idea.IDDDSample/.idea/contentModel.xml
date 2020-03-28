@@ -106,13 +106,16 @@
         <e p="Event" t="Include">
           <e p="Source" t="Include">
             <e p="EventStore.cs" t="Include" />
+            <e p="StoredEvent.cs" t="Include" />
           </e>
         </e>
         <e p="IDDDCommon.csproj" t="IncludeRecursive" />
         <e p="Notification" t="Include">
+          <e p="Notification.cs" t="Include" />
           <e p="NotificationPublisher.cs" t="Include" />
+          <e p="NotificationSerializer.cs" t="Include" />
           <e p="PublishedNotificationTracker.cs" t="Include" />
-          <e p="PublishNotificationTrackerStore.cs" t="Include" />
+          <e p="PublishedNotificationTrackerStore.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -125,13 +128,10 @@
           <e p="Adapter" t="Include">
             <e p="Messaging" t="Include">
               <e p="Rabbitmq" t="Include">
-                <e p="BrokerChannel.cs" t="Include" />
                 <e p="ConnectionSettings.cs" t="Include" />
                 <e p="ExchangeListener.cs" t="Include" />
-                <e p="Exchanger.cs" t="Include" />
-                <e p="Queue.cs" t="Include" />
+                <e p="MessageProducer.cs" t="Include" />
                 <e p="RabbitMQMessageListener.cs" t="Include" />
-                <e p="RabbitMQMessageProducer.cs" t="Include" />
                 <e p="RabbitMQNotificationPublisher.cs" t="Include" />
               </e>
             </e>
@@ -140,7 +140,9 @@
               <e p="Mysql" t="Include">
                 <e p="MySqlProvider.cs" t="Include" />
               </e>
-              <e p="Redis" t="Include" />
+              <e p="Redis" t="Include">
+                <e p="RedisEventStore.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -161,6 +163,10 @@
           </e>
         </e>
         <e p="IDDDCommon.Test.csproj" t="IncludeRecursive" />
+        <e p="Notification" t="Include">
+          <e p="NotificationPublisherFixture.cs" t="Include" />
+          <e p="NotificationSerializerFixture.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -173,7 +179,11 @@
             <e p="Message" t="Include">
               <e p="Rabbitmq" t="Include">
                 <e p="ConnectionSettingFixture.cs" t="Include" />
-                <e p="RabbitMessageProviderFixture.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Persistence" t="Include">
+              <e p="Redis" t="Include">
+                <e p="RedisStoredEventFixture.cs" t="Include" />
               </e>
             </e>
           </e>

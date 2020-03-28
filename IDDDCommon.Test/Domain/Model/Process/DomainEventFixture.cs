@@ -22,22 +22,22 @@ namespace IDDDCommon.Test.Domain.Model.Process
             
             Assert.That(result, Is.EqualTo(expected));
         }
-    }
-
-    public class MyDomainEvent : DomainEvent
-    {
-        private const int _domainEventVersion = 1;
-        public MyDomainEvent(string message)
+        
+        private class MyDomainEvent : DomainEvent
         {
-            this.EventVersion = _domainEventVersion;
-            this.EventId = Guid.NewGuid().ToString();
-            this.OccurredOn = DateTime.Now;
-            this.Message = message;
-        }
+            private const int _domainEventVersion = 1;
+            public MyDomainEvent(string message)
+            {
+                this.EventVersion = _domainEventVersion;
+                this.EventId = Guid.NewGuid().ToString();
+                this.OccurredOn = DateTime.Now;
+                this.Message = message;
+            }
 
-        public int EventVersion { get; }
-        public string EventId { get; private set; }
-        public DateTime OccurredOn { get; private set; }
-        public string Message { get; private set; }
+            public int EventVersion { get; }
+            public string EventId { get; private set; }
+            public DateTime OccurredOn { get; private set; }
+            public string Message { get; private set; }
+        }
     }
 }

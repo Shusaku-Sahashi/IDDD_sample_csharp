@@ -6,11 +6,11 @@ using RabbitMQ.Client;
 
 namespace IDDDCommon.Port.Adapter.Messaging.Rabbitmq
 {
-    public class RabbitMQMessageProducer
+    public class MessageProducer
     {
         private readonly string channelName;
         
-        public RabbitMQMessageProducer(string channelName)
+        public MessageProducer(string channelName)
         {
             this.channelName = channelName;
         }

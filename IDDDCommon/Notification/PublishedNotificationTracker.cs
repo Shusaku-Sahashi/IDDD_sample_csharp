@@ -5,5 +5,9 @@ namespace IDDDCommon.Test.Notification
     /// </summary>
     public class PublishedNotificationTracker
     {
+        public long Id { get; set; }
+        public long MostLatestPublishedId { get; set; }
+        public int CurrencyVersion { get; set; }
+        public string TypeName { get; set; }
     }
 }

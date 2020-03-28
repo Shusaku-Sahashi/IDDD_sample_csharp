@@ -7,7 +7,7 @@ namespace IDDDAgilePm
     {
         static void Main(string[] args)
         {
-            new RabbitMQMessageProducer()._Send("fanout-test");
+            // new RabbitMQMessageProducer()._Send("fanout-test");
         }
     }
 }
