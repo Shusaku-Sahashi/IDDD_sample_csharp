@@ -8,28 +8,16 @@ namespace IDDDCommon.Port.Adapter.Messaging.Rabbitmq
 {
     public class MessageProducer
     {
-        private readonly string channelName;
+        private readonly BrokerChannel _channel;
         
-        public MessageProducer(string channelName)
+        public MessageProducer(BrokerChannel channel)
         {
-            this.channelName = channelName;
+            this._channel = channel;
         }
         
         public void Send(string message)
         {
-            var factory = new ConnectionFactory()
-            {
-                HostName = ConnectionSettings.Instance().HostName,
-                Port = ConnectionSettings.Instance().Port,
-                VirtualHost = ConnectionSettings.Instance().VirtualHost,
-            };
-
-            using var connection = factory.CreateConnection();
-            using var channel = connection.CreateModel();
-
-            channel.ExchangeDeclare(channelName, ExchangeType.Fanout);
-            
-            channel.BasicPublish(channelName, 
+            this._channel.Channel.BasicPublish(exchange: this._channel.ExchangeName,
                 "", 
                 null, 
                 Encoding.UTF8.GetBytes(message));

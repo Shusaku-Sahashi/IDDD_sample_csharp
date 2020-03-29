@@ -10,7 +10,7 @@ namespace IDDDCommon.Test.Port.Adapter.Message.Rabbitmq
         public void CanFetchSetting()
         {
             var config = ConnectionSettings.Instance();
-            Assert.That(config.HostName, Is.EqualTo("rabbitmq"));
+            Assert.That(config.HostName, Is.EqualTo("localhost"));
         }
     }
 }

@@ -105,6 +105,7 @@
         </e>
         <e p="Event" t="Include">
           <e p="Source" t="Include">
+            <e p="EventSerializer.cs" t="Include" />
             <e p="EventStore.cs" t="Include" />
             <e p="StoredEvent.cs" t="Include" />
           </e>
@@ -128,9 +129,12 @@
           <e p="Adapter" t="Include">
             <e p="Messaging" t="Include">
               <e p="Rabbitmq" t="Include">
+                <e p="BrackerChannle.cs" t="Include" />
                 <e p="ConnectionSettings.cs" t="Include" />
+                <e p="Exchange.cs" t="Include" />
                 <e p="ExchangeListener.cs" t="Include" />
                 <e p="MessageProducer.cs" t="Include" />
+                <e p="Queue.cs" t="Include" />
                 <e p="RabbitMQMessageListener.cs" t="Include" />
                 <e p="RabbitMQNotificationPublisher.cs" t="Include" />
               </e>
@@ -164,7 +168,7 @@
         </e>
         <e p="IDDDCommon.Test.csproj" t="IncludeRecursive" />
         <e p="Notification" t="Include">
-          <e p="NotificationPublisherFixture.cs" t="Include" />
+          <e p="NotificationPubSubFixture.cs" t="Include" />
           <e p="NotificationSerializerFixture.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -179,6 +183,7 @@
             <e p="Message" t="Include">
               <e p="Rabbitmq" t="Include">
                 <e p="ConnectionSettingFixture.cs" t="Include" />
+                <e p="MessageProducerFixture.cs" t="Include" />
               </e>
             </e>
             <e p="Persistence" t="Include">
