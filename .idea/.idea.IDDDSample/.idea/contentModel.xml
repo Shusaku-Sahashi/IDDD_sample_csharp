@@ -111,9 +111,14 @@
           </e>
         </e>
         <e p="IDDDCommon.csproj" t="IncludeRecursive" />
+        <e p="Media" t="Include">
+          <e p="AbstractJsonMediaReader.cs" t="Include" />
+          <e p="ExtendJsonElement.cs" t="Include" />
+        </e>
         <e p="Notification" t="Include">
           <e p="Notification.cs" t="Include" />
           <e p="NotificationPublisher.cs" t="Include" />
+          <e p="NotificationReader.cs" t="Include" />
           <e p="NotificationSerializer.cs" t="Include" />
           <e p="PublishedNotificationTracker.cs" t="Include" />
           <e p="PublishedNotificationTrackerStore.cs" t="Include" />
@@ -128,11 +133,14 @@
         <e p="Port" t="Include">
           <e p="Adapter" t="Include">
             <e p="Messaging" t="Include">
+              <e p="Exchanges.cs" t="Include" />
               <e p="Rabbitmq" t="Include">
                 <e p="BrackerChannle.cs" t="Include" />
                 <e p="ConnectionSettings.cs" t="Include" />
                 <e p="Exchange.cs" t="Include" />
                 <e p="ExchangeListener.cs" t="Include" />
+                <e p="MessageConsumer.cs" t="Include" />
+                <e p="MessageListener.cs" t="Include" />
                 <e p="MessageProducer.cs" t="Include" />
                 <e p="Queue.cs" t="Include" />
                 <e p="RabbitMQMessageListener.cs" t="Include" />
@@ -167,8 +175,10 @@
           </e>
         </e>
         <e p="IDDDCommon.Test.csproj" t="IncludeRecursive" />
+        <e p="Media" t="Include">
+          <e p="AbstractJsonMediaReaderFixture.cs" t="Include" />
+        </e>
         <e p="Notification" t="Include">
-          <e p="NotificationPubSubFixture.cs" t="Include" />
           <e p="NotificationSerializerFixture.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -180,10 +190,10 @@
         </e>
         <e p="Port" t="Include">
           <e p="Adapter" t="Include">
-            <e p="Message" t="Include">
+            <e p="Messaging" t="Include">
               <e p="Rabbitmq" t="Include">
                 <e p="ConnectionSettingFixture.cs" t="Include" />
-                <e p="MessageProducerFixture.cs" t="Include" />
+                <e p="MessagePubSubFixture.cs" t="Include" />
               </e>
             </e>
             <e p="Persistence" t="Include">

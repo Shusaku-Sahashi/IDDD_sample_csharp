@@ -31,7 +31,7 @@ namespace IDDDCommon.Domain.Model.Process
 
         public void Publish<T>(T eventArg) where T : DomainEvent
         {
-            foreach (var typedAction in _actions.Select(action => action as Action<T>))
+            foreach (var typedAction in _actions.OfType<Action<T>>())
             {
                 typedAction?.Invoke(eventArg);
             }

@@ -14,7 +14,6 @@
       <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0-preview.1.20120.4" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0-preview.1.20120.4" />
       <PackageReference Include="MySql.Data" Version="8.0.19" />
-      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
       <PackageReference Include="RabbitMQ.Client" Version="6.0.0-pre9" />
       <PackageReference Include="ServiceStack.Redis" Version="5.8.0" />
     </ItemGroup>

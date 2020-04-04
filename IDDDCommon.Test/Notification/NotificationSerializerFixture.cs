@@ -1,5 +1,6 @@
 using System;
 using IDDDCommon.Domain.Model.Process;
+using IDDDCommon.Notification;
 using IDDDCommon.Test.Notification;
 using NUnit.Framework;
 

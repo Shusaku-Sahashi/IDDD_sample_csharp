@@ -1,12 +1,12 @@
-using Newtonsoft.Json;
+using System.Text.Json;
 
-namespace IDDDCommon.Test.Notification
+namespace IDDDCommon.Notification
 {
-    internal class NotificationSerializer
+    internal static class NotificationSerializer
     {
-        internal static string Serialize(IDDDCommon.Notification.Notification notification)
+        internal static string Serialize(Notification notification)
         {
-            return JsonConvert.SerializeObject(notification);
+            return JsonSerializer.Serialize(notification);
         }
     }
 }

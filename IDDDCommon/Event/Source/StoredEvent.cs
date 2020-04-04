@@ -1,9 +1,6 @@
 using System;
-using System.Runtime.CompilerServices;
-using System.Security.Policy;
 using System.Text.Json;
 using IDDDCommon.Domain.Model.Process;
-using Newtonsoft.Json;
 
 namespace IDDDCommon.Event.Source
 {
@@ -27,7 +24,7 @@ namespace IDDDCommon.Event.Source
             var type = Type.GetType(this.TypeName);
             T typedObject;
             
-            if ((typedObject = JsonConvert.DeserializeObject(this.EventBody, type) as T) == null)
+            if ((typedObject = JsonSerializer.Deserialize(this.EventBody, type) as T) == null)
                 throw new Exception($"Can not cast to {type}. eventBody: {this.EventBody}");
             
             return typedObject;

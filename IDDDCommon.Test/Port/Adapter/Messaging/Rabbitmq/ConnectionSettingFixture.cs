@@ -1,7 +1,7 @@
 using IDDDCommon.Port.Adapter.Messaging.Rabbitmq;
 using NUnit.Framework;
 
-namespace IDDDCommon.Test.Port.Adapter.Message.Rabbitmq
+namespace IDDDCommon.Test.Port.Adapter.Messaging.Rabbitmq
 {
     [TestFixture]
     public class ConnectionSettingFixture

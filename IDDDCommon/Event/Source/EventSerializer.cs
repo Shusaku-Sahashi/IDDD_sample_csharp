@@ -1,5 +1,5 @@
+using System.Text.Json;
 using IDDDCommon.Domain.Model.Process;
-using Newtonsoft.Json;
 
 namespace IDDDCommon.Event.Source
 {
@@ -7,7 +7,7 @@ namespace IDDDCommon.Event.Source
     {
         internal static string Serialize(DomainEvent domainEvent)
         {
-            return JsonConvert.SerializeObject(domainEvent);
+            return JsonSerializer.Serialize(domainEvent);
         }
     }
 }

@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  mysql:
+    container_name: iddd-sample-mysql
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "volume_test"
+      MYSQL_USER: "example"
+    networks:
+      - iddd-samples-network
+    volumes:
+      - ${PWD}/mysql:/etc/mysql/conf.d
+
+  rabbitmq:
+    container_name: iddd-sample-rabbitmq
+    image: rabbitmq:3.7.4-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - iddd-samples-network
+    volumes:
+      - ${PWD}/rabbitmq:/var/lib/rabbitmq
+
+networks:
+  iddd-samples-network:
+    external: true
