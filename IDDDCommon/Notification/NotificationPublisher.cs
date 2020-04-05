@@ -10,7 +10,7 @@ namespace IDDDCommon.Notification
 {
     public class NotificationPublisher
     {
-        public NotificationPublisher(PublishedNotificationTrackerStore publishedNotificationTrackerStore,
+        public NotificationPublisher(IPublishedNotificationTrackerStore publishedNotificationTrackerStore,
             EventStore eventStore, MessageProducer exchangeProducer)
         {
             this.PublishedNotificationTrackerStore = publishedNotificationTrackerStore;
@@ -26,9 +26,10 @@ namespace IDDDCommon.Notification
             // Notificationが発行された最新のIDを取得する。
             var publishedNotificationTracker =
                 this.PublishedNotificationTrackerStore.PublishedNotificationTracker();
+            
             // 最新の未送信Listを作成
             var unpublishedNotifications = this.ListUnpublishedNotifications(
-                publishedNotificationTracker.MostLatestPublishedId);
+                publishedNotificationTracker.MostLatestPublishedId).ToList();
             
             this.Publish(unpublishedNotifications);
 
@@ -60,8 +61,8 @@ namespace IDDDCommon.Notification
                 this.MessageProducer.Send(notification);
             }
         }
-        
-        private PublishedNotificationTrackerStore PublishedNotificationTrackerStore { get;  set; }
+
+        private IPublishedNotificationTrackerStore PublishedNotificationTrackerStore { get;  set; }
         private EventStore EventStore { get; set; }
         private MessageProducer MessageProducer { get; set; }
     }

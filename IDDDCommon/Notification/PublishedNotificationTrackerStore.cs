@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using IDDDCommon.Test.Notification;
 
-namespace IDDDCommon.Test.Notification
+namespace IDDDCommon.Notification
 {
     /**
-     * 送信済の
+     * 送信済のNotificationを保持するためのクラス
      */
-    public interface PublishedNotificationTrackerStore
+    public interface IPublishedNotificationTrackerStore
     {
         PublishedNotificationTracker PublishedNotificationTracker();
         /// <summary>
