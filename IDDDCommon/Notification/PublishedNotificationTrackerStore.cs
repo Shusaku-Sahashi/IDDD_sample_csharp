@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using IDDDCommon.Test.Notification;
 
 namespace IDDDCommon.Notification
 {
@@ -10,14 +9,14 @@ namespace IDDDCommon.Notification
     {
         PublishedNotificationTracker PublishedNotificationTracker();
         /// <summary>
-        /// PublishNotificationTrackerを更新して保存する
+        /// PublishedNotificationTrackerを最新のNotificationで更新して保存する。
         /// </summary>
         /// <param name="publishedNotificationTracker"></param>
         /// <param name="notifications"></param>
-        void TrackPublishedNotificationTracker(
+        void TrackMotsResentPublishedNotification(
             PublishedNotificationTracker publishedNotificationTracker,
-            IEnumerable<IDDDCommon.Notification.Notification> notifications);
+            IEnumerable<Notification> notifications);
 
-        long MostLatestPublishedNotificationTracker();
+        void Purge();
     }
 }

@@ -154,6 +154,7 @@
               </e>
               <e p="Redis" t="Include">
                 <e p="RedisEventStore.cs" t="Include" />
+                <e p="RedisPublishNotificationTrackerStore.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -198,6 +199,7 @@
             </e>
             <e p="Persistence" t="Include">
               <e p="Redis" t="Include">
+                <e p="RedisPublishNotificationTrackerStoreFixture.cs" t="Include" />
                 <e p="RedisStoredEventFixture.cs" t="Include" />
               </e>
             </e>

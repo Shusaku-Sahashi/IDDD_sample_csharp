@@ -4,7 +4,6 @@ using System.Linq;
 using IDDDCommon.Domain.Model.Process;
 using IDDDCommon.Event.Source;
 using IDDDCommon.Port.Adapter.Messaging.Rabbitmq;
-using IDDDCommon.Test.Notification;
 
 namespace IDDDCommon.Notification
 {
@@ -33,8 +32,9 @@ namespace IDDDCommon.Notification
             
             this.Publish(unpublishedNotifications);
 
+            // 送信したNotificationを直近の送信履歴として保存
             this.PublishedNotificationTrackerStore.
-                TrackPublishedNotificationTracker(publishedNotificationTracker, unpublishedNotifications);
+                TrackMotsResentPublishedNotification(publishedNotificationTracker, unpublishedNotifications);
         }
 
         private IEnumerable<Notification> ListUnpublishedNotifications(long mostPublishedNotificationId)
