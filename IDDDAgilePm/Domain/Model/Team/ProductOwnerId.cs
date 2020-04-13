@@ -23,7 +23,7 @@ namespace IDDDAgilePm.Domain.Model.Team
             {
                 var typedObject = (ProductOwnerId) obj;
                 equalObject =
-                    typedObject.TenantId == this.TenantId &&
+                    typedObject.TenantId.Equals(this.TenantId) &&
                     typedObject.Id == this.Id;
             }
 

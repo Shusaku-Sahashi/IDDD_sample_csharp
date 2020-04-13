@@ -4,13 +4,16 @@ using System.Linq;
 using IDDDCommon.Domain.Model.Process;
 using IDDDCommon.Event.Source;
 using IDDDCommon.Port.Adapter.Messaging.Rabbitmq;
+using Unity;
 
 namespace IDDDCommon.Notification
 {
     public class NotificationPublisher
     {
-        public NotificationPublisher(IPublishedNotificationTrackerStore publishedNotificationTrackerStore,
-            EventStore eventStore, MessageProducer exchangeProducer)
+        public NotificationPublisher(
+            IPublishedNotificationTrackerStore publishedNotificationTrackerStore,
+            EventStore eventStore, 
+            MessageProducer exchangeProducer)
         {
             this.PublishedNotificationTrackerStore = publishedNotificationTrackerStore;
             this.EventStore = eventStore;

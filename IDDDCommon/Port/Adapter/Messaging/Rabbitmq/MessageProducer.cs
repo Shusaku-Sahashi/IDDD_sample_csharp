@@ -8,16 +8,16 @@ namespace IDDDCommon.Port.Adapter.Messaging.Rabbitmq
 {
     public class MessageProducer
     {
-        private readonly BrokerChannel _channel;
+        private readonly Exchange _exchange;
         
-        public MessageProducer(BrokerChannel channel)
+        public MessageProducer(Exchange exchange)
         {
-            this._channel = channel;
+            this._exchange = exchange;
         }
         
         public void Send(string message)
         {
-            this._channel.Channel.BasicPublish(exchange: this._channel.ExchangeName,
+            this._exchange.Channel.BasicPublish(exchange: this._exchange.ExchangeName,
                 "", 
                 null, 
                 Encoding.UTF8.GetBytes(message));

@@ -2,7 +2,7 @@ using System;
 
 namespace IDDDAgilePm.Domain.Model.Tenant
 {
-    internal class TenantId : ValueObject
+    public class TenantId : ValueObject
     {
         private string _id;
         

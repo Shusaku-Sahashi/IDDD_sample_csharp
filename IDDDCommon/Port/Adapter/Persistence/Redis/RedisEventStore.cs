@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using IDDDCommon.Domain.Model.Process;
 using IDDDCommon.Event.Source;
 using ServiceStack.Redis;
 
@@ -24,14 +25,21 @@ namespace IDDDCommon.Port.Adapter.Persistence.Redis
             return storedEvents;
         }
 
-        public void Store(StoredEvent storedEvent)
+        public void Store(DomainEvent domainEvent)
         {
             using var redisManager = new PooledRedisClientManager();
             using var redis = redisManager.GetClient();
 
             var redisStoredEvent =  redis.As<StoredEvent>();
 
-            storedEvent.Id = redisStoredEvent.GetNextSequence();
+            var eventSerialized = EventSerializer.Serialize(domainEvent);
+            
+            var storedEvent = new StoredEvent(
+                redisStoredEvent.GetNextSequence(),
+                eventSerialized,
+                domainEvent.GetType().ToString(),
+                domainEvent.OccurredOn
+                );
 
             redisStoredEvent.Store(storedEvent);
         }

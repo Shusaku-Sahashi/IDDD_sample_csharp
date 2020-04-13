@@ -15,13 +15,24 @@
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="IDDDAgilePm" t="IncludeRecursive">
+        <e p="_Documents" t="Include">
+          <e p="AppliationServiceLifeCycle.puml" t="Include" />
+        </e>
         <e p="Application" t="Include">
+          <e p="ApplicationServiceLifeCycle.cs" t="Include" />
           <e p="Team" t="Include">
+            <e p="EnableMemberCommand.cs" t="Include" />
+            <e p="EnableProductOwnerCommand.cs" t="Include" />
+            <e p="EnableTeamMemberCommand.cs" t="Include" />
             <e p="TeamApplicationService.cs" t="Include" />
           </e>
         </e>
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Config" t="Include">
+          <e p="AgilePmConfigure.cs" t="Include" />
+          <e p="ServiceProvider.cs" t="Include" />
+        </e>
         <e p="Domain" t="Include">
           <e p="Model" t="Include">
             <e p="Entity.cs" t="Include" />
@@ -53,6 +64,7 @@
         </e>
         <e p="Port" t="Include">
           <e p="Adapter" t="Include">
+            <e p="Messaging" t="Include" />
             <e p="Persistence" t="Include">
               <e p="DataModel" t="Include">
                 <e p="TeamMemberDTO.cs" t="Include" />
@@ -65,7 +77,13 @@
         <e p="Program.cs" t="Include" />
       </e>
       <e p="IDDDAgilePm.Test" t="IncludeRecursive">
+        <e p="Application" t="Include">
+          <e p="TeamApplicationServiceFixture.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Config" t="Include">
+          <e p="AgilePmTestServiceProvider.cs" t="Include" />
+        </e>
         <e p="Domain" t="Include">
           <e p="Model" t="Include">
             <e p="MemberTestFixture.cs" t="Include" />
@@ -83,6 +101,10 @@
         <e p="Port" t="Include">
           <e p="Adapter" t="Include">
             <e p="Persistence" t="Include">
+              <e p="Inmemory" t="Include">
+                <e p="InMemoryProductOwnerRepository.cs" t="Include" />
+                <e p="InMemoryTeamMemberRepository.cs" t="Include" />
+              </e>
               <e p="Mysql" t="Include">
                 <e p="MysqlTeamMemberRepositoryFixture.cs" t="Include" />
               </e>
@@ -94,6 +116,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Config" t="Include">
           <e p="ApplicationConfig.cs" t="Include" />
+          <e p="CommonServiceProvider.cs" t="Include" />
         </e>
         <e p="Domain" t="Include">
           <e p="Model" t="Include">

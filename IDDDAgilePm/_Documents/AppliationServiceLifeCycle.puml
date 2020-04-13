@@ -1,0 +1,15 @@
+@startuml
+group Serviceで共通で実行
+    TeamApplicationService -> ApplicationServiceLifeCycle : Begin()
+    ApplicationServiceLifeCycle -> ApplicationServiceLifeCycle : Listen()
+    ApplicationServiceLifeCycle -> DomainEventPublisher : DomainEventPublisher.Current().Register()
+    note over DomainEventPublisher
+        DomainEventが発生した場合に呼び出す関数を登録。
+        EventStoreで渡されたDomainEventをEventStoreに登録する。
+    end note
+    ApplicationServiceLifeCycle --> TeamApplicationService : IDisposable
+    note over TeamApplicationService
+        Serviceの終わりにDisposeが呼ばれる様にする。
+    end note
+end group
+@enduml

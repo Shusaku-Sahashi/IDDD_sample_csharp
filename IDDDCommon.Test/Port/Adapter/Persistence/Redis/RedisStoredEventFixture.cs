@@ -1,7 +1,9 @@
 using System;
 using System.Linq;
+using IDDDCommon.Domain.Model.Process;
 using IDDDCommon.Event.Source;
 using IDDDCommon.Port.Adapter.Persistence.Redis;
+using IDDDCommon.Test.Port.Adapter.Messaging.Rabbitmq;
 using NUnit.Framework;
 using NUnit.Framework.Internal.Commands;
 using ServiceStack;
@@ -23,12 +25,13 @@ namespace IDDDCommon.Test.Port.Adapter.Persistence.Redis
         public void CanGetAllStoredEventAll()
         {
             Enumerable
-                .Range(1, 10).Select(n => new StoredEvent(n, $"test {n}", "test-type", DateTime.Now)).ToList()
+                .Range(1, 10).Select(n => new MyDomainEvent($"test {n}")).ToList()
                 .ForEach(e => _redisEventStore.Store(e));
 
             var actual = _redisEventStore.AllStoredEventSince(1);
-            
-            Assert.That(actual.FirstOrDefault()?.EventBody,  Is.EqualTo("test 1"));
+
+            Assert.That(actual.FirstOrDefault()?.EventBody, 
+                Is.EqualTo(EventSerializer.Serialize(new MyDomainEvent("test 1"))));
         }
     }
 }

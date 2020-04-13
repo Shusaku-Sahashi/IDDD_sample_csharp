@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace IDDDAgilePm.Test.Port.Adapter.Persistence.Mysql
 {
     [TestFixture]
-    public class MysqlTeamMemberRepositoryFixture
+    internal class MysqlTeamMemberRepositoryFixture
     {
         private readonly TenantId tenantId = new TenantId(Guid.NewGuid().ToString());
         private readonly string username = "TestUsername";
